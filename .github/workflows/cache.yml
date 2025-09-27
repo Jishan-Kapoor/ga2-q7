@@ -19,7 +19,8 @@ jobs:
           key: cache-a7274ae
 
       - name: Report cache status
-        run: echo "Cache result: ${{ steps.cache.outputs.cache-hit }}"
+        run: |
+          echo "Cache result: ${{ steps.cache.outputs.cache-hit }}"
 
       - name: Install dependencies
         run: |
